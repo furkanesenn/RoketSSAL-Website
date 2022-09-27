@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="RoketSSAL liseli öğrenciler arasında kurulmuş ve yarışmalar için roket yapmaya çalışan bir öğrenci takımıdır."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="static/content/img/favicon.webp" />
+    <link rel="apple-touch-icon" href="static/content/img/favicon.webp" />
+
+    <link rel="stylesheet" href="static/css/general.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="stylesheet" href="static/css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      defer
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      defer
+    ></script>
+
+    <script src="static/src/script.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal" ;></script>
+
+    <style>
+      * {
+        transition: color, background-color 0.25s ease;
+      }
+
+      body {
+        color: #555;
+        --color-bg-adefined: #e7f5ff;
+        --featuredin-logos-gap: 13rem;
+        --nav-link-color: #333;
+        --heading-color: #333;
+        --btn-outline-color: #444;
+        --about-us-circle-inner: #d0ebff;
+        --about-us-circle-outter: #e7f5ff;
+        --subheading-color: #1864ab;
+        --department-icon-color: #1864ab;
+        --department-icon-bgcolor: #d0ebff;
+        --cta-text-color: #071e33;
+        --cta-btn-bgcolor: #071e33;
+        --cta-bg-linear1: #1864ab;
+        --cta-bg-linear2: #4683bc;
+        --cta-bg-linear3: rgba(24, 100, 171, 0.5);
+        --cta-bg-linear4: rgba(70, 131, 188, 0.5);
+        --color-input: #071e33;
+        --footer-link-color: #767676;
+      }
+
+      .header,
+      .section-hero {
+        background-color: var(--color-bg-adefined);
+      }
+
+      body.dark-theme {
+        color: #eee;
+        background-color: #0c3256;
+        --color-bg-adefined: #071e33;
+        --nav-link-color: #eee;
+        --heading-color: #eee;
+        --btn-outline-color: #ddd;
+        --about-us-circle-inner: #071e33;
+        --about-us-circle-outter: #0a2844;
+        --subheading-color: #8cb2d5;
+        --department-icon-color: #74a2cd;
+        --department-icon-bgcolor: #071e33;
+        --cta-text-color: #e7f6ff;
+        --cta-btn-bgcolor: #1864ab;
+        --cta-bg-linear1: #051422;
+        --cta-bg-linear2: #071e33;
+        --cta-bg-linear3: rgba(7, 30, 51, 0.5);
+        --cta-bg-linear4: rgba(5, 20, 34, 0.5);
+        --color-input: #071e33;
+        --footer-link-color: #bbb;
+      }
+
+      body.dark-theme .logo,
+      body.dark-theme .footer-logo {
+        content: url("static/content/img/RoketSSAL_light.webp");
+        /* height: 4rem !important; */
+      }
+
+      body.dark-theme.sticky .header {
+        background-color: #0c3256;
+      }
+
+      body.dark-theme .heading-featured-in {
+        color: #ccc;
+      }
+
+      body.dark-theme .logos img {
+        filter: contrast(150%);
+        opacity: 0.5;
+      }
+    </style>
+
+    <title>RoketSSAL &mdash; Roket Takımı</title>
+  </head>
+  <body>
+    <div class="loading-screen">
+      <img class="loading-image" src="static/content/img/favicon.webp" alt="" />
+    </div>
+
+    <header class="header">
+      <a href="#">
+        <img
+          class="logo"
+          src="static/content/img/RoketSSAL_black.webp"
+          alt="RoketSSAL Logo"
+        />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li>
+            <a class="main-nav-link" href="#about-us">Hakkımızda</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="#members">Üyelerimiz</a>
+          </li>
+          <li>
+            <a class="main-nav-link nav-cta" href="#cta">Bültene Kaydol</a>
+          </li>
+          <li>
+            <a class="main-nav-link theme-changer" href="#"
+              ><ion-icon name="sunny-outline"></ion-icon
+            ></a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box scroll-reveal">
+            <h1 class="heading-primary">Lise Uzay ve Havacılık Takımı</h1>
+            <p class="hero-description">
+              Sakıp Sabancı Anadolu Lisesi'nin havacılığa meraklı öğrencileri
+              tarafından, milli teknoloji hamlesiyle birlikte, sivil roket
+              araçları oluşturmak ve geliştirmek amacıyla kurduğu roket
+              takımıdır.
+            </p>
+            <div class="btns">
+              <a href="#" class="btn btn-primary margin-right-sm"
+                >Keşfe Başla</a
+              >
+
+              <a href="#" class="btn btn-outline">Bültene Kaydol</a>
+            </div>
+          </div>
+          <div class="hero-img-box">
+            <picture>
+              <source srcset="static/content/img/hero.webp" type="image/webp" />
+              <source srcset="static/content/img/hero.png" type="image/png" />
+
+              <img
+                src="static/content/img/hero.webp"
+                class="hero-img"
+                alt="Güvenli bir alanda kalkış yapmakta olan bir roket."
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section section class="section-featured">
+        <div class="container">
+          <h2 class="heading-featured-in">ÖNE ÇIKARILANLAR</h2>
+          <div class="logos">
+            <a
+              href="https://www.teknofest.org/tr/"
+              rel="noopener norefferer"
+              target="_blank"
+            >
+              <img
+                src="static/content/img/logos/Teknofest.webp"
+                alt="Teknofest Logo"
+              />
+            </a>
+            <a
+              href="https://sabancilisesi.meb.k12.tr/"
+              rel="noopener norefferer"
+              target="_blank"
+            >
+              <img
+                src="static/content/img/logos/SSAL.webp"
+                alt="Sakıp Sabancı Anadolu Lisesi Logo"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-about-us container grid grid-col-3" id="about-us">
+        <div class="about-us-img-container animate">
+          <img
+            class="about-us-img"
+            src="static/content/img/about_us.webp"
+            alt="Ekip halinde bir Macbook üzerinde çalışan insanlar"
+            loading="lazy"
+          />
+        </div>
+        <div class="about-us-content">
+          <div class="about-us-header">
+            <p class="subheading">HAKKIMIZDA</p>
+            <h2 class="heading-secondary">Takımımızı daha yakından tanı!</h2>
+          </div>
+          <p class="about-us-text">
+            RoketSSAL Roket Takımı olarak, 2022 yılı içerisinde Sakıp Sabancı
+            Anadolu Lisesi'nde, genç yaştaki havacılık ve roket sanayi alanında
+            ilgili insanları bir araya getirmek ve gelecekleri için yeni
+            fırsatlar doğurmak amacıyla kurulduk. Roket takımımızın misyonu,
+            ekibimizdeki üyelerimizi havacılık ve roket alanında bilgi sahibi
+            yapmak ve okulumuzu yarışma alanlarında gururla temsil etmektir.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-departments container" id="departments">
+        <div class="departments-header">
+          <p class="subheading">DEPARTMANLARIMIZ</p>
+          <h2 class="heading-secondary">Çalışma sahalarımızı öğrenin!</h2>
+        </div>
+        <div class="departments grid grid-col-3">
+          <div class="department">
+            <ion-icon
+              class="department-icon animated"
+              name="globe-outline"
+            ></ion-icon>
+            <p class="department-title">PR Departmanı</p>
+            <p class="department-text">
+              Takım içerisinde sosyal alanda aktif olan, iletişim ağlarını ve
+              medyaları yöneten departmanımız
+            </p>
+          </div>
+          <div class="department">
+            <ion-icon
+              class="department-icon animated"
+              name="hardware-chip-outline"
+            ></ion-icon>
+            <p class="department-title">Yapısal Departmanı</p>
+            <p class="department-text">
+              Takım içerisinde roket hakkında endüstriyel tasarım ve üretimleri
+              yapan departmanımız
+            </p>
+          </div>
+          <div class="department">
+            <ion-icon
+              class="department-icon animated"
+              name="construct-outline"
+            ></ion-icon>
+            <p class="department-title">Aviyonik Departmanı</p>
+            <p class="department-text">
+              Takım içerisinde rokette kullanılacak aviyonik sistemlerin
+              tedariğiyle ilgilenen departmanımız
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section-members" id="members">
+        <div class="members-header text-center">
+          <p class="subheading">ÜYELERIMIZ</p>
+          <h2 class="heading-secondary">Ekibimizle tanışmaya başlayın!</h2>
+          <div class="grid grid-col-5 container">
+            <div class="member mentor">
+              <div class="member-img-box">
+                <ion-icon
+                  class="members-picture"
+                  name="person-circle-outline"
+                ></ion-icon>
+                <div class="member-social">
+                  <a href="https://instagram.com"
+                    ><ion-icon
+                      class="member-linkedin-icon"
+                      name="logo-linkedin"
+                    ></ion-icon
+                  ></a>
+                  <a href="https://instagram.com"
+                    ><ion-icon
+                      class="member-instagram-icon"
+                      name="logo-instagram"
+                    ></ion-icon
+                  ></a>
+                </div>
+              </div>
+              <div class="member-details">
+                <p class="member-name">Yasemin Doğan</p>
+                <p class="member-role">TAKIM DANIŞMANI</p>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-img-box">
+                <img
+                  class="members-picture"
+                  src="static/content/img/members/ahmet.webp"
+                  alt="ABCDE EDCBA Resim"
+                  loading="lazy"
+                />
+                <div class="member-social">
+                  <a href="https://instagram.com"
+                    ><ion-icon
+                      class="member-linkedin-icon"
+                      name="logo-linkedin"
+                    ></ion-icon
+                  ></a>
+                  <a href="https://instagram.com"
+                    ><ion-icon
+                      class="member-instagram-icon"
+                      name="logo-instagram"
+                    ></ion-icon
+                  ></a>
+                </div>
+              </div>
+              <div class="member-details">
+                <p class="member-name">Ahmet Kankılıç</p>
+                <p class="member-role">TAKIM KAPTANI</p>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-img-box">
+                <img
+                  class="members-picture"
+                  src="static/content/img/members/batuhan.webp"
+                  alt="ABCDE EDCBA Resim"
+                  loading="lazy"
+                />
+                <div class="member-social">
+                  <a href="https://instagram.com"
+                    ><ion-icon
+                      class="member-linkedin-icon"
+                      name="logo-linkedin"
+                    ></ion-icon
+                  ></a>
+                  <a href="https://instagram.com"
+                    ><ion-icon
+                      class="member-instagram-icon"
+                      name="logo-instagram"
+                    ></ion-icon
+                  ></a>
+                </div>
+              </div>
+              <div class="member-details">
+                <p class="member-name">Batuhan Ceylan</p>
+                <p class="member-role">YAPISAL D.</p>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-img-box">
+                <img
+                  class="members-picture"
+                  src="static/content/img/members/poyraz.webp"
+                  alt="ABCDE EDCBA Resim"
+                  loading="lazy"
+                />
+                <div class="member-social">
+                  <a href="https://instagram.com"
+                    ><ion-icon
+                      class="member-linkedin-icon"
+                      name="logo-linkedin"
+                    ></ion-icon
+                  ></a>
+                  <a href="https://instagram.com"
+                    ><ion-icon
+                      class="member-instagram-icon"
+                      name="logo-instagram"
+                    ></ion-icon
+                  ></a>
+                </div>
+              </div>
+              <div class="member-details">
+                <p class="member-name">Yusuf Poyraz</p>
+                <p class="member-role">YAPISAL D.</p>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-img-box">
+                <ion-icon
+                  class="members-picture"
+                  name="person-circle-outline"
+                ></ion-icon>
+                <div class="member-social">
+                  <a href="https://instagram.com"
+                    ><ion-icon
+                      class="member-linkedin-icon"
+                      name="logo-linkedin"
+                    ></ion-icon
+                  ></a>
+                  <a href="https://instagram.com"
+                    ><ion-icon
+                      class="member-instagram-icon"
+                      name="logo-instagram"
+                    ></ion-icon
+                  ></a>
+                </div>
+              </div>
+              <div class="member-details">
+                <p class="member-name">Takım Üyesi</p>
+                <p class="member-role">AVİYONİK D.</p>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-img-box">
+                <ion-icon
+                  class="members-picture"
+                  name="person-circle-outline"
+                ></ion-icon>
+                <div class="member-social">
+                  <a href="https://instagram.com"
+                    ><ion-icon
+                      class="member-linkedin-icon"
+                      name="logo-linkedin"
+                    ></ion-icon
+                  ></a>
+                  <a href="https://instagram.com"
+                    ><ion-icon
+                      class="member-instagram-icon"
+                      name="logo-instagram"
+                    ></ion-icon
+                  ></a>
+                </div>
+              </div>
+              <div class="member-details">
+                <p class="member-name">İrem Badur</p>
+                <p class="member-role">PR KAPTANI</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-cta" id="cta">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <div class="heading-secondary">Bizimle iletişime geçin!</div>
+              <p class="cta-text">
+                RoketSSAL Roket Takımı hakkında olan sorularınıza cevap bulmak
+                için aşağıdaki formu doldurarak bizimle iletişime
+                geçebilirsiniz.
+              </p>
+
+              <form class="cta-form" action="mailing_list/add" method="POST">
+                <!-- {% csrf_token %} -->
+                <div>
+                  <label for="full-name">İsim</label>
+                  <input
+                    id="full-name"
+                    type="text"
+                    name="full-name"
+                    placeholder="Furkan Esen"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="email">Elektronik Posta</label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="ben@ornek.com"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="select-where">Bizi nereden buldunuz?</label>
+                  <select id="select-where" name="where-found" required>
+                    <option value="">Lütfen bir tanesini seçin:</option>
+                    <option value="friends">Arkadaşlar</option>
+                    <option value="school-posters">Okul Afişleri</option>
+                    <option value="social-media">Sosyal Medya</option>
+                  </select>
+                </div>
+
+                <input
+                  type="submit"
+                  value="Şimdi kaydol"
+                  class="btn btn-form"
+                />
+              </form>
+            </div>
+            <div
+              class="cta-img-box animated"
+              role="img"
+              aria-label="Kalkış yapan bir roket"
+              loading="lazy"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container grid grid-footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img
+              class="logo"
+              src="static/content/img/RoketSSAL_black.webp"
+              alt="RoketSSAL Logo"
+              loading="lazy"
+            />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a
+                class="footer-link"
+                href="https://www.instagram.com/roketssal.roket/"
+                rel="noopener norefferer"
+                target="_blank"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                class="footer-link"
+                href="https://www.linkedin.com/in/roketssal-roket-tak%C4%B1m%C4%B1-251140251"
+                rel="noopener norefferer"
+                target="_blank"
+                ><ion-icon class="social-icon" name="logo-linkedin"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                class="footer-link"
+                href="https://twitter.com/roketssal?t=XlM7wU_t5AvxFhfcW6CruA&s=09"
+                rel="noopener norefferer"
+                target="_blank"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; 2022 by RoketSSAL. Developed by
+            <strong>Furkan Esen</strong>
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Bize ulaş</p>
+
+          <address class="contact">
+            <p class="address">
+              <a
+                class="footer-link"
+                href="https://www.google.com/maps/search/?api=1&query=Y%C4%B1ld%C4%B1z,%20Y%C4%B1ld%C4%B1z%20Cd.%20No:73,%2034349%20Be%C5%9Fikta%C5%9F/%C4%B0stanbul"
+                target="_blank"
+                rel="norefferer noopener"
+                >Yıldız, Yıldız Cd. No:73, 34349 Beşiktaş/İstanbul
+              </a>
+            </p>
+            <p>
+              <!-- <a class="footer-link" href="></a> -->
+              <a class="footer-link" href="mailto:roketssal@gmail.com"
+                >roketssal@gmail.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <div class="footer-heading">Yararlı Linkler</div>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#about-us">Hakkımızda</a></li>
+            <li><a class="footer-link" href="#departments">Departmanlar</a></li>
+            <li><a class="footer-link" href="#members">Üyelerimiz</a></li>
+            <li><a class="footer-link" href="#cta">Bülten</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col socialmedia-col">
+          <div class="footer-heading">RoketSSAL</div>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Giriş Yap</a></li>
+            <li><a class="footer-link" href="#">Kayıt Ol</a></li>
+            <li><a class="footer-link" href="#">Kullanıcı Paneli</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col customer-col">
+          <div class="footer-heading">Yasal</div>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Gizlilik Politikası</a></li>
+            <li><a class="footer-link" href="#">Kullanım Esasları</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      // Theme Changer
+
+      const themeChanger = document.querySelector(".theme-changer");
+
+      localStorage.setItem("theme", "light-theme");
+
+      themeChanger.addEventListener("click", (_e) => {
+        changeTheme();
+      });
+
+      const changeTheme = () => {
+        let siteTheme = localStorage.getItem("theme");
+
+        localStorage.setItem(
+          "theme",
+          siteTheme == "dark-theme" ? "light-theme" : "dark-theme"
+        );
+
+        document.body.classList.add(localStorage.getItem("theme"));
+        document.body.classList.remove(siteTheme);
+      };
+    </script>
+  </body>
+</html>
